@@ -1,0 +1,9 @@
+# API Configuration
+VITE_API_URL=http://localhost:5000
+
+# Authentication
+VITE_AUTH_DOMAIN=your-auth-domain.com
+VITE_AUTH_CLIENT_ID=your-client-id
+
+# File Upload
+VITE_UPLOAD_URL=http://localhost:5000/api/upload

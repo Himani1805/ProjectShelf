@@ -1,0 +1,44 @@
+{
+    "name": "projectshelf-client",
+    "private": true,
+    "version": "0.1.0",
+    "type": "module",
+    "scripts": {
+        "dev": "vite",
+        "build": "vite build",
+        "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
+        "preview": "vite preview"
+    },
+    "dependencies": {
+        "axios": "^1.6.2",
+        "chart.js": "^4.4.9",
+        "cloudinary-react": "^1.8.1",
+        "daisyui": "^4.4.2",
+        "date-fns": "^2.30.0",
+        "jwt-decode": "^4.0.0",
+        "path": "^0.12.7",
+        "react": "^18.2.0",
+        "react-chartjs-2": "^5.3.0",
+        "react-dom": "^18.2.0",
+        "react-hook-form": "^7.48.2",
+        "react-icons": "^4.12.0",
+        "react-markdown": "^9.0.1",
+        "react-quill": "^2.0.0",
+        "react-router-dom": "^6.20.0",
+        "recharts": "^2.10.1"
+    },
+    "devDependencies": {
+        "@tailwindcss/typography": "^0.5.10",
+        "@types/react": "^18.2.37",
+        "@types/react-dom": "^18.2.15",
+        "@vitejs/plugin-react": "^4.2.0",
+        "autoprefixer": "^10.4.21",
+        "eslint": "^8.53.0",
+        "eslint-plugin-react": "^7.33.2",
+        "eslint-plugin-react-hooks": "^4.6.0",
+        "eslint-plugin-react-refresh": "^0.4.4",
+        "postcss": "^8.5.3",
+        "tailwindcss": "^3.3.5",
+        "vite": "^5.0.0"
+    }
+}

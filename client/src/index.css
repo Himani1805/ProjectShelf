@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    body {
+        @apply min-h-screen bg-base-100 text-base-content;
+    }
+}
+
+@layer components {
+
+    /* Remove the circular dependency by not using @apply with btn-primary */
+    .custom-btn-primary {
+        @apply btn text-white bg-primary hover:bg-primary-focus;
+    }
+
+    .custom-btn-secondary {
+        @apply btn text-white bg-secondary hover:bg-secondary-focus;
+    }
+
+    .card-hover {
+        @apply transition-all duration-300 hover:shadow-lg hover:-translate-y-1;
+    }
+
+    .form-input {
+        @apply input input-bordered w-full;
+    }
+}

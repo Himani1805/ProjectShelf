@@ -6,7 +6,7 @@ const {
     updateCaseStudy,
     deleteCaseStudy
 } = require('../controllers/caseStudyController');
-const { protect } = require('../middlewares/auth');
+const { protect, authorize } = require('../middlewares/auth');
 
 const router = express.Router();
 
@@ -18,7 +18,7 @@ router
 router
     .route('/:id')
     .get(getCaseStudy)
-    .put(protect, updateCaseStudy)
-    .delete(protect, deleteCaseStudy);
+    .put(protect,authorize('creator'), updateCaseStudy)
+    .delete(protect,authorize('creator'), deleteCaseStudy);
 
 module.exports = router;

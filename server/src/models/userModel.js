@@ -23,10 +23,11 @@ const userSchema = new mongoose.Schema({
         minlength: 6,
         select: false
     },
+
     role: {
         type: String,
-        enum: ['user', 'admin'],
-        default: 'user'
+        enum: ['creator', 'visitor'],
+        default: 'visitor'
     },
     bio: {
         type: String,

@@ -8,7 +8,7 @@ const {
     getRecentProjects,
     togglePublishStatus
 } = require('../controllers/projectController');
-const { protect } = require('../middlewares/auth');
+const { protect, authorize } = require('../middlewares/auth');
 
 const router = express.Router();
 
@@ -22,8 +22,8 @@ router.get('/recent', protect, getRecentProjects);
 router
     .route('/:id')
     .get(getProject)
-    .put(protect, updateProject)
-    .delete(protect, deleteProject);
+    .put(protect,authorize('creator'), updateProject)
+    .delete(protect,authorize('creator'), deleteProject);
 
 // Toggle publish status route
 router.put('/:id/publish', protect, togglePublishStatus);
